@@ -56,7 +56,7 @@ jobs:
           PCIT_GIT_URL: github.com/docker-practice/zh-cn
           PCIT_KEEP_HISTORY: "true"
           PCIT_LOCAL_DIR: _book
-          PCIT_MESSAGE: Sync from yeasy/docker_practice@${{github.sha}} by PCIT
+          PCIT_MESSAGE: Build from yeasy/docker_practice@${{github.sha}}
           PCIT_TARGET_BRANCH: master
           PCIT_USERNAME: khs1994
       - name: vuepress
@@ -115,7 +115,7 @@ jobs:
           PCIT_GIT_URL: e.coding.net/dpsigs/docker_practice
           PCIT_KEEP_HISTORY: "true"
           PCIT_LOCAL_DIR: .vuepress/dist
-          PCIT_MESSAGE: Sync from yeasy/docker_practice@${{github.sha}} by PCIT
+          PCIT_MESSAGE: Build from yeasy/docker_practice@${{github.sha}}
           PCIT_TARGET_BRANCH: master
           PCIT_USERNAME: ptt0xjqzbke3
       - name: Build vuepress docker image
