@@ -1,0 +1,22 @@
+// https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+
+{
+  "image": "yeasy/docker_practice:latest",
+  "mounts": [
+    "source=dp-code-remote-cache,target=/root/.vscode-server,type=volume"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/sh"
+  },
+  "forwardPorts": [
+    4000
+  ],
+  "runArgs": [
+    "--cap-add=SYS_ADMIN"
+  ],
+  "postStartCommand": [
+    "sh",
+    "-cx",
+    "pwd ; cd /workspaces/docker_practice ; mkdir -p ${PWD}/node_modules; mkdir -p ${PWD}/_book; mount --bind /srv/gitbook/node_modules ${PWD}/node_modules ; mount --bind /mnt ${PWD}/_book"
+  ]
+}
