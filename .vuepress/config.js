@@ -126,8 +126,8 @@ module.exports = config({
       //   link: ''
       // },
       {
-        text: '腾讯云2021新春采购节',
-        link: 'https://cloud.tencent.com/act/cps/redirect?redirect=10488&cps_key=3a5255852d5db99dcd5da4c72f05df61&from=activity'
+        text: '云服务器特惠',
+        link: 'https://cloud.tencent.com/act/cps/redirect?redirect=1062&cps_key=3a5255852d5db99dcd5da4c72f05df61&from=console'
       },
       // {
       //   text: '语言',
