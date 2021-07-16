@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>使用 kubeadm 部署 kubernetes · Docker -- 从入门到实践</title>
+        <title>使用 kubeadm 部署 kubernetes(CRI 使用 containerd) · Docker -- 从入门到实践</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -1864,7 +1864,7 @@
                 <a href="kubeadm.html">
             
                     
-                    使用 kubeadm 部署 kubernetes
+                    使用 kubeadm 部署 kubernetes(CRI 使用 containerd)
             
                 </a>
             
@@ -2471,83 +2471,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.29" data-path="../../archive/">
-            
-                <a href="../../archive/">
-            
-                    
-                    归档
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.29.1" data-path="../../machine/">
-            
-                <a href="../../machine/">
-            
-                    
-                    Docker Machine
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.29.1.1" data-path="../../machine/install.html">
-            
-                <a href="../../machine/install.html">
-            
-                    
-                    安装
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.29.1.2" data-path="../../machine/usage.html">
-            
-                <a href="../../machine/usage.html">
-            
-                    
-                    使用
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.29.2" data-path="../../swarm/">
-            
-                <a href="../../swarm/">
-            
-                    
-                    Docker Swarm
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
 
     
 
@@ -2578,7 +2501,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >使用 kubeadm 部署 kubernetes</a>
+        <a href="../.." >使用 kubeadm 部署 kubernetes(CRI 使用 containerd)</a>
     </h1>
 </div>
 
@@ -2594,10 +2517,11 @@
                                 <section class="normal markdown-section">
                                 
                                 <div class="treeview__container"><div class="treeview__container-title"><span class="treeview__main-title">Treeview</span><span class="treeview__copyright">Copyright &#xA9; yeasy all right reserved, powered by <a href="https://github.com/aleen42" target="_blank">aleen42</a></span></div><ul>
-<li><div><a href="#&#x4F7F;&#x7528;-kubeadm-&#x90E8;&#x7F72;-kubernetes">&#x4F7F;&#x7528; kubeadm &#x90E8;&#x7F72; kubernetes</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<li><div><a href="#&#x4F7F;&#x7528;-kubeadm-&#x90E8;&#x7F72;-kubernetescri-&#x4F7F;&#x7528;-containerd">&#x4F7F;&#x7528; kubeadm &#x90E8;&#x7F72; kubernetes(CRI &#x4F7F;&#x7528; containerd)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
-<li><div><a href="#&#x5B89;&#x88C5;-docker">&#x5B89;&#x88C5; Docker</a><i></i></div></li>
-<li><div><a href="#&#x5B89;&#x88C5;-kubelet-kubeadm-kubectl">&#x5B89;&#x88C5; kubelet kubeadm kubectl</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<li><div><a href="#&#x5B89;&#x88C5;-containerd">&#x5B89;&#x88C5; containerd</a><i></i></div></li>
+<li><div><a href="#&#x914D;&#x7F6E;-containerd">&#x914D;&#x7F6E; containerd</a><i></i></div></li>
+<li><div><a href="#&#x5B89;&#x88C5;-kubelet-kubeadm-kubectl-cri-tools-kubernetes-cni">&#x5B89;&#x88C5; kubelet kubeadm kubectl cri-tools kubernetes-cni</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
 <li><div><a href="#ubuntudebian">Ubuntu/Debian</a><i></i></div></li>
 <li><div><a href="#centosfedora">CentOS/Fedora</a><i></i></div></li>
@@ -2629,11 +2553,194 @@
 </ul>
 </div>
 
-<h1 id="&#x4F7F;&#x7528;-kubeadm-&#x90E8;&#x7F72;-kubernetes">&#x4F7F;&#x7528; kubeadm &#x90E8;&#x7F72; kubernetes</h1>
+<h1 id="&#x4F7F;&#x7528;-kubeadm-&#x90E8;&#x7F72;-kubernetescri-&#x4F7F;&#x7528;-containerd">&#x4F7F;&#x7528; kubeadm &#x90E8;&#x7F72; kubernetes(CRI &#x4F7F;&#x7528; containerd)</h1>
 <p><code>kubeadm</code> &#x63D0;&#x4F9B;&#x4E86; <code>kubeadm init</code> &#x4EE5;&#x53CA; <code>kubeadm join</code> &#x8FD9;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x4F5C;&#x4E3A;&#x5FEB;&#x901F;&#x521B;&#x5EFA; <code>kubernetes</code> &#x96C6;&#x7FA4;&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x3002;</p>
-<h2 id="&#x5B89;&#x88C5;-docker">&#x5B89;&#x88C5; Docker</h2>
-<p>&#x53C2;&#x8003; <a href="../../install">&#x5B89;&#x88C5; Docker</a> &#x4E00;&#x8282;&#x5B89;&#x88C5; Docker&#x3002;</p>
-<h2 id="&#x5B89;&#x88C5;-kubelet-kubeadm-kubectl">&#x5B89;&#x88C5; <strong>kubelet</strong> <strong>kubeadm</strong> <strong>kubectl</strong></h2>
+<h2 id="&#x5B89;&#x88C5;-containerd">&#x5B89;&#x88C5; containerd</h2>
+<p>&#x53C2;&#x8003; <a href="../../install">&#x5B89;&#x88C5; Docker</a> &#x4E00;&#x8282;&#x6DFB;&#x52A0; apt/yum &#x6E90;&#xFF0C;&#x4E4B;&#x540E;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># debian &#x7CFB;</span>
+$ sudo apt install containerd.io
+
+<span class="hljs-comment"># rhel &#x7CFB;</span>
+$ sudo yum install containerd.io
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;-containerd">&#x914D;&#x7F6E; containerd</h2>
+<p>&#x65B0;&#x5EFA; <code>/etc/systemd/system/cri-containerd.service</code> &#x6587;&#x4EF6;</p>
+<pre><code>[Unit]
+Description=containerd container runtime for kubernetes
+Documentation=https://containerd.io
+After=network.target local-fs.target
+
+[Service]
+ExecStartPre=-/sbin/modprobe overlay
+ExecStart=/usr/bin/containerd --config //etc/cri-containerd/config.toml
+
+Type=notify
+Delegate=yes
+KillMode=process
+Restart=always
+RestartSec=5
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNPROC=infinity
+LimitCORE=infinity
+LimitNOFILE=infinity
+# Comment TasksMax if your systemd version does not supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+OOMScoreAdjust=-999
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>&#x65B0;&#x5EFA; <code>/etc/cri-containerd/config.toml</code> containerd &#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-toml">version = 2
+# persistent data location
+root = &quot;/var/lib/cri-containerd&quot;
+# runtime state information
+state = &quot;/run/cri-containerd&quot;
+plugin_dir = &quot;&quot;
+disabled_plugins = []
+required_plugins = []
+# set containerd&apos;s OOM score
+oom_score = 0
+
+[grpc]
+  address = &quot;/run/cri-containerd/cri-containerd.sock&quot;
+  tcp_address = &quot;&quot;
+  tcp_tls_cert = &quot;&quot;
+  tcp_tls_key = &quot;&quot;
+  # socket uid
+  uid = 0
+  # socket gid
+  gid = 0
+  max_recv_message_size = 16777216
+  max_send_message_size = 16777216
+
+[debug]
+  address = &quot;&quot;
+  format = &quot;json&quot;
+  uid = 0
+  gid = 0
+  level = &quot;&quot;
+
+[metrics]
+  address = &quot;127.0.0.1:1338&quot;
+  grpc_histogram = false
+
+[cgroup]
+  path = &quot;&quot;
+
+[timeouts]
+  &quot;io.containerd.timeout.shim.cleanup&quot; = &quot;5s&quot;
+  &quot;io.containerd.timeout.shim.load&quot; = &quot;5s&quot;
+  &quot;io.containerd.timeout.shim.shutdown&quot; = &quot;3s&quot;
+  &quot;io.containerd.timeout.task.state&quot; = &quot;2s&quot;
+
+[plugins]
+  [plugins.&quot;io.containerd.gc.v1.scheduler&quot;]
+    pause_threshold = 0.02
+    deletion_threshold = 0
+    mutation_threshold = 100
+    schedule_delay = &quot;0s&quot;
+    startup_delay = &quot;100ms&quot;
+  [plugins.&quot;io.containerd.grpc.v1.cri&quot;]
+    disable_tcp_service = true
+    stream_server_address = &quot;127.0.0.1&quot;
+    stream_server_port = &quot;0&quot;
+    stream_idle_timeout = &quot;4h0m0s&quot;
+    enable_selinux = false
+    selinux_category_range = 1024
+    sandbox_image = &quot;registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.5&quot;
+    stats_collect_period = 10
+    # systemd_cgroup = false
+    enable_tls_streaming = false
+    max_container_log_line_size = 16384
+    disable_cgroup = false
+    disable_apparmor = false
+    restrict_oom_score_adj = false
+    max_concurrent_downloads = 3
+    disable_proc_mount = false
+    unset_seccomp_profile = &quot;&quot;
+    tolerate_missing_hugetlb_controller = true
+    disable_hugetlb_controller = true
+    ignore_image_defined_volumes = false
+    [plugins.&quot;io.containerd.grpc.v1.cri&quot;.containerd]
+      snapshotter = &quot;overlayfs&quot;
+      default_runtime_name = &quot;runc&quot;
+      no_pivot = false
+      disable_snapshot_annotations = false
+      discard_unpacked_layers = false
+      [plugins.&quot;io.containerd.grpc.v1.cri&quot;.containerd.runtimes]
+        [plugins.&quot;io.containerd.grpc.v1.cri&quot;.containerd.runtimes.runc]
+          runtime_type = &quot;io.containerd.runc.v2&quot;
+          pod_annotations = []
+          container_annotations = []
+          privileged_without_host_devices = false
+          base_runtime_spec = &quot;&quot;
+          [plugins.&quot;io.containerd.grpc.v1.cri&quot;.containerd.runtimes.runc.options]
+            # SystemdCgroup enables systemd cgroups.
+            SystemdCgroup = true
+            # BinaryName is the binary name of the runc binary.
+            # BinaryName = &quot;runc&quot;
+            # BinaryName = &quot;crun&quot;
+            # NoPivotRoot disables pivot root when creating a container.
+            # NoPivotRoot = false
+
+            # NoNewKeyring disables new keyring for the container.
+            # NoNewKeyring = false
+
+            # ShimCgroup places the shim in a cgroup.
+            # ShimCgroup = &quot;&quot;
+
+            # IoUid sets the I/O&apos;s pipes uid.
+            # IoUid = 0
+
+            # IoGid sets the I/O&apos;s pipes gid.
+            # IoGid = 0
+
+            # Root is the runc root directory.
+            Root = &quot;&quot;
+
+            # CriuPath is the criu binary path.
+            # CriuPath = &quot;&quot;
+
+            # CriuImagePath is the criu image path
+            # CriuImagePath = &quot;&quot;
+
+            # CriuWorkPath is the criu work path.
+            # CriuWorkPath = &quot;&quot;
+    [plugins.&quot;io.containerd.grpc.v1.cri&quot;.cni]
+      bin_dir = &quot;/opt/cni/bin&quot;
+      conf_dir = &quot;/etc/cni/net.d&quot;
+      max_conf_num = 1
+      conf_template = &quot;&quot;
+    [plugins.&quot;io.containerd.grpc.v1.cri&quot;.registry]
+      config_path = &quot;/etc/cri-containerd/certs.d&quot;
+      [plugins.&quot;io.containerd.grpc.v1.cri&quot;.registry.headers]
+        # Foo = [&quot;bar&quot;]
+    [plugins.&quot;io.containerd.grpc.v1.cri&quot;.image_decryption]
+      key_model = &quot;&quot;
+    [plugins.&quot;io.containerd.grpc.v1.cri&quot;.x509_key_pair_streaming]
+      tls_cert_file = &quot;&quot;
+      tls_key_file = &quot;&quot;
+  [plugins.&quot;io.containerd.internal.v1.opt&quot;]
+    path = &quot;/opt/cri-containerd&quot;
+  [plugins.&quot;io.containerd.internal.v1.restart&quot;]
+    interval = &quot;10s&quot;
+  [plugins.&quot;io.containerd.metadata.v1.bolt&quot;]
+    content_sharing_policy = &quot;shared&quot;
+  [plugins.&quot;io.containerd.monitor.v1.cgroups&quot;]
+    no_prometheus = false
+  [plugins.&quot;io.containerd.runtime.v2.task&quot;]
+    platforms = [&quot;linux/amd64&quot;]
+  [plugins.&quot;io.containerd.service.v1.diff-service&quot;]
+    default = [&quot;walking&quot;]
+  [plugins.&quot;io.containerd.snapshotter.v1.devmapper&quot;]
+    root_path = &quot;&quot;
+    pool_name = &quot;&quot;
+    base_image_size = &quot;&quot;
+    async_remove = false
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;-kubelet-kubeadm-kubectl-cri-tools-kubernetes-cni">&#x5B89;&#x88C5; <strong>kubelet</strong> <strong>kubeadm</strong> <strong>kubectl</strong> <strong>cri-tools</strong> <strong>kubernetes-cni</strong></h2>
 <h3 id="ubuntudebian">Ubuntu/Debian</h3>
 <pre><code class="lang-bash">$ apt-get update &amp;&amp; apt-get install -y apt-transport-https
 $ curl https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | apt-key add -
@@ -2683,8 +2790,14 @@ ExecStartPre=-/sbin/modprobe ip_vs_sh
 </code></pre>
 <h2 id="&#x90E8;&#x7F72;">&#x90E8;&#x7F72;</h2>
 <h3 id="master">master</h3>
-<pre><code class="lang-bash">$ sudo kubeadm init --image-repository registry.cn-hangzhou.aliyuncs.com/google_containers \
+<pre><code class="lang-bash">$ systemctl <span class="hljs-built_in">enable</span> cri-containerd
+
+$ systemctl start cri-containerd
+
+$ sudo kubeadm init \
+      --image-repository registry.cn-hangzhou.aliyuncs.com/google_containers \
       --pod-network-cidr 10.244.0.0/16 \
+      --cri-socket /run/cri-containerd/cri-containerd.sock \
       --v 5 \
       --ignore-preflight-errors=all
 </code></pre>
@@ -2720,11 +2833,19 @@ kubeadm join 192.168.199.100:6443 --token cz81zt.orsy9gm9v649e5lf \
 </code></pre>
 <h3 id="node-&#x5DE5;&#x4F5C;&#x8282;&#x70B9;">node &#x5DE5;&#x4F5C;&#x8282;&#x70B9;</h3>
 <p>&#x5728; <strong>&#x53E6;&#x4E00;&#x4E3B;&#x673A;</strong> &#x91CD;&#x590D; <strong>&#x90E8;&#x7F72;</strong> &#x5C0F;&#x8282;&#x4EE5;&#x524D;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x597D; kubelet&#x3002;&#x6839;&#x636E;&#x63D0;&#x793A;&#xFF0C;&#x52A0;&#x5165;&#x5230;&#x96C6;&#x7FA4;&#x3002;</p>
-<pre><code class="lang-bash">$ kubeadm join 192.168.199.100:6443 --token cz81zt.orsy9gm9v649e5lf \
-    --discovery-token-ca-cert-hash sha256:5edb316fd0d8ea2792cba15cdf1c899a366f147aa03cba52d4e5c5884ad836fe
+<pre><code class="lang-bash">$ systemctl <span class="hljs-built_in">enable</span> cri-containerd
+
+$ systemctl start cri-containerd
+
+$ kubeadm join 192.168.199.100:6443 \
+    --token cz81zt.orsy9gm9v649e5lf \
+    --discovery-token-ca-cert-hash sha256:5edb316fd0d8ea2792cba15cdf1c899a366f147aa03cba52d4e5c5884ad836fe \
+    --cri-socket /run/cri-containerd/cri-containerd.sock
 </code></pre>
 <h2 id="&#x67E5;&#x770B;&#x670D;&#x52A1;">&#x67E5;&#x770B;&#x670D;&#x52A1;</h2>
-<p>&#x6240;&#x6709;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x67E5;&#x770B;&#x672C;&#x5730;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x7684; Docker &#x5BB9;&#x5668;&#x3002;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x5927;&#x6982;&#x5206;&#x4E3A;&#x4E09;&#x7C7B;&#xFF1A;&#x4E3B;&#x8282;&#x70B9;&#x670D;&#x52A1;&#x3001;&#x5DE5;&#x4F5C;&#x8282;&#x70B9;&#x670D;&#x52A1;&#x548C;&#x5176;&#x5B83;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x901A;&#x8FC7; <code>crictl</code> &#x67E5;&#x770B;&#x672C;&#x5730;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;&#x3002;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x5927;&#x6982;&#x5206;&#x4E3A;&#x4E09;&#x7C7B;&#xFF1A;&#x4E3B;&#x8282;&#x70B9;&#x670D;&#x52A1;&#x3001;&#x5DE5;&#x4F5C;&#x8282;&#x70B9;&#x670D;&#x52A1;&#x548C;&#x5176;&#x5B83;&#x670D;&#x52A1;&#x3002;</p>
+<pre><code class="lang-bash">CONTAINER_RUNTIME_ENDPOINT=/run/cri-containerd/cri-containerd.sock crictl ps <span class="hljs-_">-a</span>
+</code></pre>
 <h3 id="&#x4E3B;&#x8282;&#x70B9;&#x670D;&#x52A1;">&#x4E3B;&#x8282;&#x70B9;&#x670D;&#x52A1;</h3>
 <ul>
 <li><p><code>apiserver</code> &#x662F;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x5BF9;&#x5916;&#x63A5;&#x53E3;&#xFF0C;&#x63D0;&#x4F9B; RESTful &#x65B9;&#x5F0F;&#x4F9B;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x5176;&#x5B83;&#x7EC4;&#x4EF6;&#x8C03;&#x7528;&#xFF1B;</p>
@@ -2768,6 +2889,7 @@ kubeadm join 192.168.199.100:6443 --token cz81zt.orsy9gm9v649e5lf \
 <h2 id="&#x53C2;&#x8003;&#x6587;&#x6863;">&#x53C2;&#x8003;&#x6587;&#x6863;</h2>
 <ul>
 <li><a href="https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/install-kubeadm/" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+<li><a href="https://kubernetes.io/docs/setup/production-environment/container-runtimes/#containerd" target="_blank">Container runtimes</a></li>
 </ul>
 
                                 
@@ -2812,7 +2934,7 @@ kubeadm join 192.168.199.100:6443 --token cz81zt.orsy9gm9v649e5lf \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"使用 kubeadm 部署 kubernetes","level":"1.21.1","depth":2,"next":{"title":"在 Docker Desktop 使用","level":"1.21.2","depth":2,"path":"kubernetes/setup/docker-desktop.md","ref":"kubernetes/setup/docker-desktop.md","articles":[]},"previous":{"title":"部署 Kubernetes","level":"1.21","depth":1,"path":"kubernetes/setup/README.md","ref":"kubernetes/setup/README.md","articles":[{"title":"使用 kubeadm 部署 kubernetes","level":"1.21.1","depth":2,"path":"kubernetes/setup/kubeadm.md","ref":"kubernetes/setup/kubeadm.md","articles":[]},{"title":"在 Docker Desktop 使用","level":"1.21.2","depth":2,"path":"kubernetes/setup/docker-desktop.md","ref":"kubernetes/setup/docker-desktop.md","articles":[]},{"title":"一步步部署 kubernetes 集群","level":"1.21.3","depth":2,"path":"kubernetes/setup/systemd.md","ref":"kubernetes/setup/systemd.md","articles":[]},{"title":"部署 Dashboard","level":"1.21.4","depth":2,"path":"kubernetes/setup/dashboard.md","ref":"kubernetes/setup/dashboard.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-livereload","image-captions","github","page-treeview@2.9.8","editlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; yeasy","minHeaderCount":"2","minHeaderDeep":"2"},"github":{"url":"https://github.com/yeasy/docker_practice"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/yeasy/docker_practice/blob/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"image-captions":{"attributes":{"width":"600"},"caption":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"yeasy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"introduction/what.html#fig1.4.1.1","level":"1.4.1","list_caption":"Figure: Docker 架构","alt":"Docker 架构","nro":1,"url":"https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/media/docker-on-linux.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 架构","attributes":{"width":"600"},"skip":false,"key":"1.4.1.1"},{"backlink":"introduction/what.html#fig1.4.1.2","level":"1.4.1","list_caption":"Figure: 传统虚拟化","alt":"传统虚拟化","nro":2,"url":"./_images/virtualization.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"传统虚拟化","attributes":{"width":"600"},"skip":false,"key":"1.4.1.2"},{"backlink":"introduction/what.html#fig1.4.1.3","level":"1.4.1","list_caption":"Figure: Docker","alt":"Docker","nro":3,"url":"./_images/docker.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker","attributes":{"width":"600"},"skip":false,"key":"1.4.1.3"},{"backlink":"install/offline.html#fig1.6.6.1","level":"1.6.6","list_caption":"Figure: Docker-offile-install-top","alt":"Docker-offile-install-top","nro":4,"url":"_images/image-20200412202617411.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker-offile-install-top","attributes":{"width":"600"},"skip":false,"key":"1.6.6.1"},{"backlink":"advanced_network/index.html#fig1.12.1","level":"1.12","list_caption":"Figure: Docker 网络","alt":"Docker 网络","nro":5,"url":"./_images/network.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 网络","attributes":{"width":"600"},"skip":false,"key":"1.12.1"},{"backlink":"underly/arch.html#fig1.17.1.1","level":"1.17.1","list_caption":"Figure: Docker 基本架构","alt":"Docker 基本架构","nro":6,"url":"./_images/docker_arch.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 基本架构","attributes":{"width":"600"},"skip":false,"key":"1.17.1.1"},{"backlink":"kubernetes/design.html#fig1.20.3.1","level":"1.20.3","list_caption":"Figure: Kubernetes 架构","alt":"Kubernetes 架构","nro":7,"url":"./_images/k8s_architecture.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Kubernetes 架构","attributes":{"width":"600"},"skip":false,"key":"1.20.3.1"},{"backlink":"kubernetes/design.html#fig1.20.3.2","level":"1.20.3","list_caption":"Figure: Proxy 代理对服务的请求","alt":"Proxy 代理对服务的请求","nro":8,"url":"./_images/kube-proxy.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Proxy 代理对服务的请求","attributes":{"width":"600"},"skip":false,"key":"1.20.3.2"},{"backlink":"cloud/tencentCloud.html#fig1.23.2.1","level":"1.23.2","list_caption":"Figure: 腾讯云","alt":"腾讯云","nro":9,"url":"./_images/qcloud-logo.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"腾讯云","attributes":{"width":"600"},"skip":false,"key":"1.23.2.1"},{"backlink":"cloud/alicloud.html#fig1.23.3.1","level":"1.23.3","list_caption":"Figure: 阿里云","alt":"阿里云","nro":10,"url":"./_images/aliyun-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"阿里云","attributes":{"width":"600"},"skip":false,"key":"1.23.3.1"},{"backlink":"cloud/aws.html#fig1.23.4.1","level":"1.23.4","list_caption":"Figure: AWS","alt":"AWS","nro":11,"url":"./_images/aws-logo.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"AWS","attributes":{"width":"600"},"skip":false,"key":"1.23.4.1"},{"backlink":"cloud/aws.html#fig1.23.4.2","level":"1.23.4","list_caption":"Figure: AWS 容器服务","alt":"AWS 容器服务","nro":12,"url":"./_images/ECS.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"AWS 容器服务","attributes":{"width":"600"},"skip":false,"key":"1.23.4.2"},{"backlink":"cases/os/busybox.html#fig1.24.1.1","level":"1.24.1","list_caption":"Figure: Busybox - Linux 瑞士军刀","alt":"Busybox - Linux 瑞士军刀","nro":13,"url":"./_images/busybox-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Busybox - Linux 瑞士军刀","attributes":{"width":"600"},"skip":false,"key":"1.24.1.1"},{"backlink":"cases/os/alpine.html#fig1.24.2.1","level":"1.24.2","list_caption":"Figure: Alpine Linux 操作系统","alt":"Alpine Linux 操作系统","nro":14,"url":"./_images/alpinelinux-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Alpine Linux 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.2.1"},{"backlink":"cases/os/debian.html#fig1.24.3.1","level":"1.24.3","list_caption":"Figure: Debian 操作系统","alt":"Debian 操作系统","nro":15,"url":"./_images/debian-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Debian 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.3.1"},{"backlink":"cases/os/debian.html#fig1.24.3.2","level":"1.24.3","list_caption":"Figure: Ubuntu 操作系统","alt":"Ubuntu 操作系统","nro":16,"url":"./_images/ubuntu-logo.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Ubuntu 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.3.2"},{"backlink":"cases/os/centos.html#fig1.24.4.1","level":"1.24.4","list_caption":"Figure: CentOS 操作系统","alt":"CentOS 操作系统","nro":17,"url":"./_images/centos-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"CentOS 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.4.1"},{"backlink":"cases/os/centos.html#fig1.24.4.2","level":"1.24.4","list_caption":"Figure: Fedora 操作系统","alt":"Fedora 操作系统","nro":18,"url":"./_images/fedora-logo.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Fedora 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.4.2"},{"backlink":"appendix/command/docker.html#fig1.28.3.1.1","level":"1.28.3.1","list_caption":"Figure: Docker 命令总结","alt":"Docker 命令总结","nro":19,"url":"../_images/cmd_logic.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 命令总结","attributes":{"width":"600"},"skip":false,"key":"1.28.3.1.1"}]},"title":"Docker -- 从入门到实践","language":"zh-hans","links":{"sidebar":{"GitHub":"https://github.com/yeasy/docker_practice"}},"gitbook":"*"},"file":{"path":"kubernetes/setup/kubeadm.md","mtime":"2021-07-15T05:30:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T05:30:39.677Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用 kubeadm 部署 kubernetes(CRI 使用 containerd)","level":"1.21.1","depth":2,"next":{"title":"在 Docker Desktop 使用","level":"1.21.2","depth":2,"path":"kubernetes/setup/docker-desktop.md","ref":"kubernetes/setup/docker-desktop.md","articles":[]},"previous":{"title":"部署 Kubernetes","level":"1.21","depth":1,"path":"kubernetes/setup/README.md","ref":"kubernetes/setup/README.md","articles":[{"title":"使用 kubeadm 部署 kubernetes(CRI 使用 containerd)","level":"1.21.1","depth":2,"path":"kubernetes/setup/kubeadm.md","ref":"kubernetes/setup/kubeadm.md","articles":[]},{"title":"在 Docker Desktop 使用","level":"1.21.2","depth":2,"path":"kubernetes/setup/docker-desktop.md","ref":"kubernetes/setup/docker-desktop.md","articles":[]},{"title":"一步步部署 kubernetes 集群","level":"1.21.3","depth":2,"path":"kubernetes/setup/systemd.md","ref":"kubernetes/setup/systemd.md","articles":[]},{"title":"部署 Dashboard","level":"1.21.4","depth":2,"path":"kubernetes/setup/dashboard.md","ref":"kubernetes/setup/dashboard.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-livereload","image-captions","github","page-treeview@2.9.8","editlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; yeasy","minHeaderCount":"2","minHeaderDeep":"2"},"github":{"url":"https://github.com/yeasy/docker_practice"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/yeasy/docker_practice/blob/master/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"image-captions":{"attributes":{"width":"600"},"caption":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"yeasy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"introduction/what.html#fig1.4.1.1","level":"1.4.1","list_caption":"Figure: Docker 架构","alt":"Docker 架构","nro":1,"url":"https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/media/docker-on-linux.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 架构","attributes":{"width":"600"},"skip":false,"key":"1.4.1.1"},{"backlink":"introduction/what.html#fig1.4.1.2","level":"1.4.1","list_caption":"Figure: 传统虚拟化","alt":"传统虚拟化","nro":2,"url":"./_images/virtualization.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"传统虚拟化","attributes":{"width":"600"},"skip":false,"key":"1.4.1.2"},{"backlink":"introduction/what.html#fig1.4.1.3","level":"1.4.1","list_caption":"Figure: Docker","alt":"Docker","nro":3,"url":"./_images/docker.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker","attributes":{"width":"600"},"skip":false,"key":"1.4.1.3"},{"backlink":"install/offline.html#fig1.6.6.1","level":"1.6.6","list_caption":"Figure: Docker-offile-install-top","alt":"Docker-offile-install-top","nro":4,"url":"_images/image-20200412202617411.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker-offile-install-top","attributes":{"width":"600"},"skip":false,"key":"1.6.6.1"},{"backlink":"advanced_network/index.html#fig1.12.1","level":"1.12","list_caption":"Figure: Docker 网络","alt":"Docker 网络","nro":5,"url":"./_images/network.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 网络","attributes":{"width":"600"},"skip":false,"key":"1.12.1"},{"backlink":"underly/arch.html#fig1.17.1.1","level":"1.17.1","list_caption":"Figure: Docker 基本架构","alt":"Docker 基本架构","nro":6,"url":"./_images/docker_arch.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 基本架构","attributes":{"width":"600"},"skip":false,"key":"1.17.1.1"},{"backlink":"kubernetes/design.html#fig1.20.3.1","level":"1.20.3","list_caption":"Figure: Kubernetes 架构","alt":"Kubernetes 架构","nro":7,"url":"./_images/k8s_architecture.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Kubernetes 架构","attributes":{"width":"600"},"skip":false,"key":"1.20.3.1"},{"backlink":"kubernetes/design.html#fig1.20.3.2","level":"1.20.3","list_caption":"Figure: Proxy 代理对服务的请求","alt":"Proxy 代理对服务的请求","nro":8,"url":"./_images/kube-proxy.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Proxy 代理对服务的请求","attributes":{"width":"600"},"skip":false,"key":"1.20.3.2"},{"backlink":"cloud/tencentCloud.html#fig1.23.2.1","level":"1.23.2","list_caption":"Figure: 腾讯云","alt":"腾讯云","nro":9,"url":"./_images/qcloud-logo.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"腾讯云","attributes":{"width":"600"},"skip":false,"key":"1.23.2.1"},{"backlink":"cloud/alicloud.html#fig1.23.3.1","level":"1.23.3","list_caption":"Figure: 阿里云","alt":"阿里云","nro":10,"url":"./_images/aliyun-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"阿里云","attributes":{"width":"600"},"skip":false,"key":"1.23.3.1"},{"backlink":"cloud/aws.html#fig1.23.4.1","level":"1.23.4","list_caption":"Figure: AWS","alt":"AWS","nro":11,"url":"./_images/aws-logo.jpg","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"AWS","attributes":{"width":"600"},"skip":false,"key":"1.23.4.1"},{"backlink":"cloud/aws.html#fig1.23.4.2","level":"1.23.4","list_caption":"Figure: AWS 容器服务","alt":"AWS 容器服务","nro":12,"url":"./_images/ECS.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"AWS 容器服务","attributes":{"width":"600"},"skip":false,"key":"1.23.4.2"},{"backlink":"cases/os/busybox.html#fig1.24.1.1","level":"1.24.1","list_caption":"Figure: Busybox - Linux 瑞士军刀","alt":"Busybox - Linux 瑞士军刀","nro":13,"url":"./_images/busybox-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Busybox - Linux 瑞士军刀","attributes":{"width":"600"},"skip":false,"key":"1.24.1.1"},{"backlink":"cases/os/alpine.html#fig1.24.2.1","level":"1.24.2","list_caption":"Figure: Alpine Linux 操作系统","alt":"Alpine Linux 操作系统","nro":14,"url":"./_images/alpinelinux-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Alpine Linux 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.2.1"},{"backlink":"cases/os/debian.html#fig1.24.3.1","level":"1.24.3","list_caption":"Figure: Debian 操作系统","alt":"Debian 操作系统","nro":15,"url":"./_images/debian-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Debian 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.3.1"},{"backlink":"cases/os/debian.html#fig1.24.3.2","level":"1.24.3","list_caption":"Figure: Ubuntu 操作系统","alt":"Ubuntu 操作系统","nro":16,"url":"./_images/ubuntu-logo.jpg","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Ubuntu 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.3.2"},{"backlink":"cases/os/centos.html#fig1.24.4.1","level":"1.24.4","list_caption":"Figure: CentOS 操作系统","alt":"CentOS 操作系统","nro":17,"url":"./_images/centos-logo.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"CentOS 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.4.1"},{"backlink":"cases/os/centos.html#fig1.24.4.2","level":"1.24.4","list_caption":"Figure: Fedora 操作系统","alt":"Fedora 操作系统","nro":18,"url":"./_images/fedora-logo.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Fedora 操作系统","attributes":{"width":"600"},"skip":false,"key":"1.24.4.2"},{"backlink":"appendix/command/docker.html#fig1.28.3.1.1","level":"1.28.3.1","list_caption":"Figure: Docker 命令总结","alt":"Docker 命令总结","nro":19,"url":"../_images/cmd_logic.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_","label":"Docker 命令总结","attributes":{"width":"600"},"skip":false,"key":"1.28.3.1.1"}]},"title":"Docker -- 从入门到实践","language":"zh-hans","links":{"sidebar":{"GitHub":"https://github.com/yeasy/docker_practice"}},"gitbook":"*"},"file":{"path":"kubernetes/setup/kubeadm.md","mtime":"2021-07-16T04:47:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T04:47:46.895Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
